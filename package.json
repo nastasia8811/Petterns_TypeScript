@@ -1,0 +1,50 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "nodemon server.mjs",
+    "prepare": "husky"
+  },
+  "type": "module",
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/test/**",
+      "**/docs/**",
+      [
+        "data/*"
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "node.js"
+  },
+  "author": "Melnyk Anastasiia",
+  "license": "ISC",
+  "description": "Node.js learning projects and exercises from Dan.it Education course — homework assignments,in-class exercises, and practice examples covering core Node.js concepts.",
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@types/node": "^26.6.3",
+    "eslint": "^9.39.5",
+    "globals": "^17.12.0",
+    "husky": "^9.1.7",
+    "nodemon": "^3.1.14",
+    "prettier": "3.9.9",
+    "typescript": "~5.7.0",
+    "typescript-eslint": "^8.70.1"
+  },
+  "dependencies": {
+    "uuid": "^14.0.2"
+  },
+  "keywords": []
+}
