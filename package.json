@@ -1,9 +1,9 @@
 {
   "name": "node.js",
   "version": "1.0.0",
-  "main": "server.mjs",
+  "main": "server.ts",
   "scripts": {
-    "start": "nodemon server.mjs",
+    "start": "nodemon server.ts",
     "prepare": "husky"
   },
   "type": "module",
@@ -17,12 +17,12 @@
     ]
   },
   "nodemonConfig": {
+    "ext": "ts,json",
+    "exec": "tsx",
     "ignore": [
       "**/test/**",
       "**/docs/**",
-      [
-        "data/*"
-      ]
+      "data/*"
     ]
   },
   "repository": {
@@ -40,6 +40,7 @@
     "husky": "^9.1.7",
     "nodemon": "^3.1.14",
     "prettier": "3.9.9",
+    "tsx": "^4.23.15",
     "typescript": "~5.7.0",
     "typescript-eslint": "^8.70.1"
   }
